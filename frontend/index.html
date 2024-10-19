@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Betbook</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-signin-client_id"
+        content="1076437468600-i4dkve532p3r6l3pf36lltkbfnfia8ja.apps.googleusercontent.com">
+    <meta name="referrer" content="unsafe-url">
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.min.css">
+    <link rel="manifest" href="/static/manifest.json" />
+</head>
+
+<body id="body">
+    <nav>
+        <nav-item item-name=bets>Bets</nav-item>
+        <nav-item item-name=events>Events</nav-item>
+        <nav-item item-name=community>Community</nav-item>
+        <nav-item item-name=profile>Profile</nav-item>
+    </nav>
+    <h1>Betbook</h1>
+    <content name="profile">
+        <h2>Sam</h2>
+        Balance:
+        <balance>$550</balance>
+        <gain>+$50</gain>
+    </content>
+    <content name="login">
+        <script src="https://accounts.google.com/gsi/client" async defer></script>
+        <div id="g_id_onload" data-client_id="1076437468600-i4dkve532p3r6l3pf36lltkbfnfia8ja.apps.googleusercontent.com"
+            data-callback="onSignIn">
+        </div>
+        <div class="g_id_signin" data-type="standard"></div>
+    </content>
+    <content name=community>
+        <h2>Hypehauss</h2>
+        <select name="community"></select>
+        <button>Switch community</button>
+        <h1>Leaderboard</h1>
+        <leaderboard>
+            <ol>
+                <li>
+                    <name>Person 1</name>
+                    <balance>$550</balance>
+                    <gain>+$50</gain>
+                </li>
+                <li>
+                    <name>Person 2</name>
+                    <balance>$550</balance>
+                    <gain>+$50</gain>
+                </li>
+                <li>
+                    <name>Person 3</name>
+                    <balance>$550</balance>
+                    <gain>+$50</gain>
+                </li>
+                <li>
+                    <name>Person 4</name>
+                    <balance>$450</balance>
+                    <loss>-$50</loss>
+                </li>
+            </ol>
+        </leaderboard>
+    </content>
+    <content name=create-bet>
+        <h2 class=link>Will the sun rise tomorrow?</h2>
+        <input name="payout" inputmode="numeric" placeholder="50"> / <input inputmode="numeric" name="stake"
+            placeholder="50">
+        <label name="direction">
+            <input type="button">
+            <direction side=yes>YES</direction>
+        </label>
+        Amount
+        <br>
+        <input name="amount" inputmode="numeric" placeholder="1">
+        <br>
+        <button>Bet</button>
+    </content>
+    <content name=create-event>
+        <textarea name="title" placeholder="Will I finish my project by Friday?"></textarea>
+        <button>Create event</button>
+    </content>
+    <content name=bet-offers>
+        <h2 class=link>Will the sun rise tomorrow?</h2>
+        <bet-offers>
+            <bet-offer>
+                <direction side=yes>YES</direction>
+                <odds>
+                    <payout>10</payout>
+                    <stake>985</stake>
+                </odds>
+                <author-name>Sam</author-name>
+                <remaining>1</remaining>
+                <button>Bet</button>
+            </bet-offer>
+            <hr>
+            <bet-offer>
+                <direction side=no>NO</direction>
+                <odds>
+                    <payout>995</payout>
+                    <stake>10</stake>
+                </odds>
+                <author-name>Sam</author-name>
+                <remaining>1</remaining>
+                <button>Bet</button>
+            </bet-offer>
+        </bet-offers>
+    </content>
+    <content name=bets>
+        <h2 class=link>Bets</h2>
+        <bets>
+            <bet>
+                <event-title>Will the sun rise tomorrow?</event-title>
+                <odds>
+                    <payout>10</payout>
+                    <stake>985</stake>
+                </odds>
+                <author-name>Sam</author-name>
+                <remaining>1</remaining>
+                <button>Bet</button>
+            </bet>
+            <hr>
+            <bet>
+                <event-title>Will a car drive on the motorway this week?</event-title>
+                <odds>
+                    <payout>1</payout>
+                    <stake>19</stake>
+                </odds>
+                <author-name>Sam</author-name>
+                <remaining>1</remaining>
+                <button>Bet</button>
+            </bet>
+            <hr>
+            <bet>
+                <event-title>Will it snow within the next year?</event-title>
+                <odds>
+                    <payout>1</payout>
+                    <stake>19</stake>
+                </odds>
+                <author-name>Sam</author-name>
+                <remaining>1</remaining>
+                <button>Bet</button>
+            </bet>
+            <hr>
+        </bets>
+    </content>
+    <content name=events>
+        <h2 class=link>Events</h2>
+        <button-container>
+            <button name="show-create-event">
+            Create event
+            </button>
+        </button-container>
+        <events>
+            <event>
+                <event-title>Will the sun rise tomorrow?</event-title>
+                <author-name>Sam</author-name>
+                <number-of-bets>0</number-of-bets>
+                <button>Bet</button>
+            </event>
+            <hr>
+            <event>
+                <event-title>Will a car drive on the motorway this week?</event-title>
+                <author-name>Sam</author-name>
+                <number-of-bets>0</number-of-bets>
+                <button>Bet</button>
+            </event>
+            <hr>
+            <event>
+                <event-title>Will it snow within the next year?</event-title>
+                <author-name>Sam</author-name>
+                <number-of-bets>0</number-of-bets>
+                <button>Bet</button>
+            </event>
+            <hr>
+        </events>
+    </content>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript" src="/static/index.js"></script>
+</body>
+
+</html>

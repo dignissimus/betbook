@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+    font-family: "Aleo", serif;
+    color: #222;
+}
+
+h1 {
+   text-align: center;
+}
+
+h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    color: hsl(197, 25.43%, 74.52%);
+}
+
+
+content {
+    display: block;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+event, bet, bet-offer {
+    display: block;
+    border-radius: 20px;
+}
+
+event-title {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
+hr {
+    color: #ccc;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.link {
+}
+
+bet odds, bet-offer odds {
+    font-size: 30px;
+}
+
+bet odds *, bet-offer odds * {
+    display: inline;
+}
+
+bet payout, bet-offer payout {
+    color: hsl(81, 30%, 50%);
+}
+
+bet payout::after, bet-offer payout::after {
+    color: black;
+    content: " / ";
+}
+
+bet stake, bet-offer stake {
+    color: hsl(340, 100%, 40%);
+}
+
+author-name, remaining {
+    display: block;
+}
+
+bet-offer {
+    text-align: center;
+}
+
+direction {
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+direction[side=yes] {
+    color: hsl(81, 30%, 50%);
+}
+
+direction[side=no] {
+    color: hsl(340, 100%, 40%);
+}
+
+content[name=create-bet] input[name=payout], content[name=create-bet] input[name=stake] {
+    display: inline;
+    border: none;
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+label[name=direction] input {
+    display: none;
+}
+
+label[name=direction] input + direction {
+    margin-top: 20px;
+}
+
+input[name=payout] {
+    color: hsl(81, 30%, 50%);
+}
+
+input[name=stake] {
+    color: hsl(340, 100%, 40%);
+}
+
+bet author-name::before {
+    content: "Offered by: ";
+    color: #aaa;
+}
+
+bet-offer author-name::before {
+    content: "Offered by: ";
+    color: #aaa;
+}
+
+bet remaining::before, bet-offer remaining::before {
+    content: "Bets remaining: ";
+    color: #aaa;
+}
+
+event.author-name {
+    visibility: none;
+}
+event.author-name::before {
+    content: "Created by ";
+    color: #aaa;
+}
+
+nav {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+number-of-bets {
+    display: block;
+}
+
+number-of-bets::after {
+    content: " bets on this event";
+    color: #aaa;
+}
+
+odds, odds *{
+    display:block;
+    margin-bottom: 10px;
+}
+
+
+odds fractional::before{
+    content: "Fractional ";
+    color: #aaa;
+}
+
+odds decimal::before{
+    content: "Decimal ";
+    color: #aaa;
+}
+
+content[name=login] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+@media (min-width: 1281px) {
+    nav-item {
+        cursor: pointer;
+    }
+}
+
+odds moneyline::before{
+    content: "Moneyline: ";
+    color: #aaa;
+}
+
+content[name=create-event] textarea[name=title] {
+    padding: 2rem;
+    border-radius: .5rem;
+    border-bottom-width: 2px;
+    width: 80%;
+    resize: none;
+    font-size: 10px;
+    font-weight: bold;
+    height: 20px;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+content[name=create-event], content[name=create-bet]{
+    text-align: center;
+}
+
+
+content[name=create-bet] input[name=amount] {
+    border: 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+balance {
+    color: #5E5DF0;
+}
+
+gain::before, loss::before {
+    content: '(';
+}
+
+
+gain::after, loss::after {
+    content: ')';
+}
+
+loss {
+    color: hsl(340, 100%, 40%);
+}
+
+gain {
+    color: hsl(81, 30%, 50%);
+}
+
+leaderboard {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin-top: 20px;
+    background: #5E5DF0;
+    border-radius: 999px;
+    box-shadow: #5E5DF0 0 10px 20px -10px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 1;
+    padding: 10px 40px;
+    border: 0;
+}
+
+button-container {
+    display: flex;
+    justify-content: center;
+}

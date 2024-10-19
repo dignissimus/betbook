@@ -1,0 +1,30 @@
+{
+  "name": "Betbook",
+  "short_name": "Betbook",
+  "icons": [
+    {
+      "src": "betbook.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://betbook.ezeh.uk/",
+  "display": "standalone",
+  "screenshots": [
+    {
+      "src": "events.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Application"
+    },
+    {
+      "src": "bet.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Application"
+    }
+  ]
+}
+
